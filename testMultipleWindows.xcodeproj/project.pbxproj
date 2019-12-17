@@ -49,6 +49,8 @@
 		1A3F2DAA23A8B76000C8011D /* testMultipleWindowsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testMultipleWindowsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A3F2DAE23A8B76000C8011D /* testMultipleWindowsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testMultipleWindowsUITests.swift; sourceTree = "<group>"; };
 		1A3F2DB023A8B76000C8011D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A3F2DBC23A8B7D800C8011D /* testMultipleWindows.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testMultipleWindows.entitlements; sourceTree = "<group>"; };
+		1A3F2DBE23A8BB9700C8011D /* testMultipleWindows-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testMultipleWindows-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		1A3F2D8B23A8B75F00C8011D /* testMultipleWindows */ = {
 			isa = PBXGroup;
 			children = (
+				1A3F2DBC23A8B7D800C8011D /* testMultipleWindows.entitlements */,
 				1A3F2D8C23A8B75F00C8011D /* AppDelegate.swift */,
 				1A3F2D8E23A8B75F00C8011D /* SceneDelegate.swift */,
 				1A3F2D9023A8B75F00C8011D /* ViewController.swift */,
@@ -106,6 +109,7 @@
 				1A3F2D9523A8B76000C8011D /* Assets.xcassets */,
 				1A3F2D9723A8B76000C8011D /* LaunchScreen.storyboard */,
 				1A3F2D9A23A8B76000C8011D /* Info.plist */,
+				1A3F2DBE23A8BB9700C8011D /* testMultipleWindows-Bridging-Header.h */,
 			);
 			path = testMultipleWindows;
 			sourceTree = "<group>";
@@ -196,6 +200,7 @@
 				TargetAttributes = {
 					1A3F2D8823A8B75F00C8011D = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 					1A3F2D9E23A8B76000C8011D = {
 						CreatedOnToolsVersion = 11.1;
@@ -434,7 +439,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = testMultipleWindows/testMultipleWindows.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = H5BVQ8XRL4;
 				INFOPLIST_FILE = testMultipleWindows/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -443,6 +451,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.goodnotes.testMultipleWindows;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "testMultipleWindows/testMultipleWindows-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,7 +463,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = testMultipleWindows/testMultipleWindows.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = H5BVQ8XRL4;
 				INFOPLIST_FILE = testMultipleWindows/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -461,6 +475,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.goodnotes.testMultipleWindows;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "testMultipleWindows/testMultipleWindows-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
